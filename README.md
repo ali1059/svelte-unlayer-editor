@@ -18,3 +18,18 @@ Install the package via NPM:
 
 ```bash
 npm install svelte-unlayer-editor
+
+
+📝 Props
+
+Prop	Type	Description
+design	UnlayerDesign | null	Initial design to load in the editor
+tools	UnlayerTools | null	Optional custom tools for the editor
+options	UnlayerOptions	Configuration options for the editor
+
+
+📢 Events
+Event	Payload	Description
+onloaded	{ editor: UnlayerEditorInstance }	Fires when the editor is initialized and ready
+ondesignupdated	{ design: UnlayerDesign }	Fires when the editor design changes
+onexporthtml	{ html: string, design: UnlayerDesign }
