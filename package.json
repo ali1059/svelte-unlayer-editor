@@ -1,0 +1,47 @@
+{
+  "name": "svelte-unlayer-editor",
+  "version": "1.0.0",
+  "description": "A reusable Svelte wrapper for the Unlayer email editor.",
+  "type": "module",
+  "main": "dist/unlayer-editor.umd.js",
+  "module": "dist/unlayer-editor.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/unlayer-editor.es.js",
+      "require": "./dist/unlayer-editor.umd.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "svelte",
+    "unlayer",
+    "email-editor",
+    "svelte-email-editor",
+    "svelte-emaileditor",
+    "svelte-component",
+    "drag-and-drop-email-builder"
+  ],
+  "author": "Ali",
+  "license": "MIT",
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^6.1.1",
+    "@tsconfig/svelte": "^5.0.4",
+    "prettier": "^3.6.2",
+    "prettier-plugin-svelte": "^3.4.0",
+    "svelte": "^5.38.10",
+    "svelte-check": "^4.3.1",
+    "typescript": "~5.8.3",
+    "vite": "^7.1.5"
+  },
+  "peerDependencies": {
+    "svelte": "^5.0.0"
+  }
+}

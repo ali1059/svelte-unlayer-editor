@@ -1,0 +1,11 @@
+{
+  "plugins": ["prettier-plugin-svelte"],
+  "semi": true,
+  "singleQuote": true,
+  "printWidth": 80,
+  "tabWidth": 2,
+  "svelteSortOrder": "scripts-markup-styles",
+  "svelteStrictMode": true,
+  "svelteBracketNewLine": true,
+  "svelteAllowShorthand": true
+}
