@@ -33,3 +33,35 @@ Event	Payload	Description
 onloaded	{ editor: UnlayerEditorInstance }	Fires when the editor is initialized and ready
 ondesignupdated	{ design: UnlayerDesign }	Fires when the editor design changes
 onexporthtml	{ html: string, design: UnlayerDesign }
+
+### Usage
+
+<script lang="ts">
+  import UnlayerEditor, {
+    loadDesign,
+    saveDesign,
+    exportHtml,
+    getEditorInstance
+  } from 'svelte-unlayer-editor';
+
+  let design = null;
+
+  function handleLoaded({ editor }) {
+    console.log('Editor loaded', editor);
+  }
+
+  function handleDesignUpdated({ design }) {
+    console.log('Design updated', design);
+  }
+
+  function handleExport({ html, design }) {
+    console.log('Exported HTML:', html);
+  }
+</script>
+
+<UnlayerEditor
+  {design}
+  onloaded={handleLoaded}
+  ondesignupdated={handleDesignUpdated}
+  onexporthtml={handleExport}
+/>
